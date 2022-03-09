@@ -123,6 +123,7 @@ describe('Creating application', () => {
     cy.get('.aa-List').find('.aa-Item').should('have.length', 1);
     cy.get('.aa-Item').contains('=').should('exist');
     cy.focused().type('{enter}');
+    cy.wait(1000);
     cy.focused().type('opensearch');
     cy.get('[data-test-subj="searchAutocompleteTextArea"]').click();
     cy.get('.aa-Item').contains('opensearch_dashboards_sample_data_flights').click();
