@@ -114,7 +114,7 @@ describe('Creating application', () => {
     cy.get('.euiButton').contains('Create').should('not.be.disabled');
   });
 
-  it('Suggests correct autocompletion', () => {
+  it.skip('Suggests correct autocompletion', () => {
     cy.get('.euiAccordion').contains('Log source').click();
     cy.get('[data-test-subj="searchAutocompleteTextArea"]').click();
     cy.get('.aa-List').find('.aa-Item').should('have.length', 1);
@@ -311,7 +311,7 @@ describe('Viewing application', () => {
     cy.get('.euiBadge__text').contains('Base Query').should('exist');
   });
 
-  it('Saves visualization to panel', () => {
+  it.skip('Saves visualization to panel', () => {
     cy.get('.euiTab').contains('Log Events').click();
     cy.get('.plot-container').should('exist');
     cy.get('[data-test-subj="searchAutocompleteTextArea"]').click();
